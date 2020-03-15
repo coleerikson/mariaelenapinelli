@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css?family=?family=Gelasio|Open+Sans:400,700&display=swap');
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 1rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+.link {
+  box-shadow: 0 3px 0 0 #000;
+  color: #3182ce;
+  transition: box-shadow 200ms ease-in-out;
+}
+
+.link:hover {
+  box-shadow: 0 2px 0 0 #000;
+  color: #3182ce;
+}
+
+.move-y-4:hover {
+  transition: all 300ms ease-in-out;
+  transform: translateY(-2px);
+}
+
+.portrait {
+  @apply shadow-lg border border-white border-12;
+}
+
+/* Button */
+.btn-primary {
+  @apply bg-yellow-900 text-white font-bold py-3 px-8;
+}
+
+.btn-primary:hover {
+  @apply bg-yellow-800;
+}
+
+/* Extra */
+input[name='bot-field'] {
+  display: none;
+}
