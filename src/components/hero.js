@@ -1,215 +1,114 @@
 import React from 'react';
-// import { useStaticQuery, graphql } from 'gatsby';
-// import Img from 'gatsby-image';
+import Img from 'gatsby-image';
+import { useStaticQuery, graphql } from 'gatsby';
+
+const officeSVG = () => (
+  <svg
+    version="1.1"
+    id="DESIGNS"
+    x="0px"
+    y="0px"
+    width="32px"
+    height="32px"
+    viewBox="0 0 32 32"
+  >
+    <path
+      class="feather_een"
+      d="M24,23h-2c-0.552,0-1,0.448-1,1v2c0,0.552,0.448,1,1,1h2c0.552,0,1-0.448,1-1v-2  C25,23.448,24.552,23,24,23z M24,26h-2v-2h2V26z M10,23H8c-0.552,0-1,0.448-1,1v2c0,0.552,0.448,1,1,1h2c0.552,0,1-0.448,1-1v-2  C11,23.448,10.552,23,10,23z M10,26H8v-2h2V26z M24,12h-2c-0.552,0-1,0.448-1,1v2c0,0.552,0.448,1,1,1h2c0.552,0,1-0.448,1-1v-2  C25,12.448,24.552,12,24,12z M24,15h-2v-2h2V15z M10,12H8c-0.552,0-1,0.448-1,1v2c0,0.552,0.448,1,1,1h2c0.552,0,1-0.448,1-1v-2  C11,12.448,10.552,12,10,12z M10,15H8v-2h2V15z M17,12h-2c-0.552,0-1,0.448-1,1v2c0,0.552,0.448,1,1,1h2c0.552,0,1-0.448,1-1v-2  C18,12.448,17.552,12,17,12z M17,15h-2v-2h2V15z M24,6h-2c-0.552,0-1,0.448-1,1v2c0,0.552,0.448,1,1,1h2c0.552,0,1-0.448,1-1V7  C25,6.448,24.552,6,24,6z M24,9h-2V7h2V9z M10,6H8C7.448,6,7,6.448,7,7v2c0,0.552,0.448,1,1,1h2c0.552,0,1-0.448,1-1V7  C11,6.448,10.552,6,10,6z M10,9H8V7h2V9z M17,6h-2c-0.552,0-1,0.448-1,1v2c0,0.552,0.448,1,1,1h2c0.552,0,1-0.448,1-1V7  C18,6.448,17.552,6,17,6z M17,9h-2V7h2V9z M29,1.5L29,1.5C29,1.224,28.776,1,28.5,1h-25C3.224,1,3,1.224,3,1.5v0  C3,1.776,3.224,2,3.5,2H4v16H3.5C3.224,18,3,18.224,3,18.5l0,0C3,18.776,3.224,19,3.5,19H4v9c0,1.657,1.343,3,3,3h18  c1.657,0,3-1.343,3-3v-9h0.5c0.276,0,0.5-0.224,0.5-0.5l0,0c0-0.276-0.224-0.5-0.5-0.5H28V2h0.5C28.776,2,29,1.776,29,1.5z M18,30  h-4v-5.279l2-0.667l2,0.667V30z M27,28c0,1.103-0.897,2-2,2h-6v-6l-3-1l-3,1v6H7c-1.103,0-2-0.897-2-2v-7h22V28z M27,20H5v-1h22V20z   M27,18H5V4h22V18z M27,3H5V2h22V3z"
+    />
+  </svg>
+);
+
+const mailSVG = () => (
+  <svg
+    version="1.1"
+    id="DESIGNS"
+    x="0px"
+    y="0px"
+    width="32px"
+    height="32px"
+    viewBox="0 0 32 32"
+  >
+    <path
+      class="feather_een"
+      d="M28,6h-1V5c0-1.657-1.343-3-3-3H8C6.343,2,5,3.343,5,5v1H4C2.343,6,1,7.343,1,9v18c0,1.657,1.343,3,3,3  h24c1.657,0,3-1.343,3-3V9C31,7.343,29.657,6,28,6z M27,7h1c0.37,0,0.712,0.108,1.01,0.283L27,9.293V7z M6,5c0-1.103,0.897-2,2-2h16  c1.103,0,2,0.897,2,2v5.293l-10,10l-10-10V5z M4,7h1v2.293l-2.01-2.01C3.288,7.108,3.63,7,4,7z M2,27V9  c0-0.37,0.108-0.712,0.283-1.01L12.293,18L2.283,28.01C2.108,27.712,2,27.37,2,27z M28,29H4c-0.37,0-0.712-0.108-1.01-0.283  L13,18.707L15.293,21c0.391,0.391,1.024,0.391,1.414,0L19,18.707l10.01,10.01C28.712,28.892,28.37,29,28,29z M30,27  c0,0.37-0.108,0.712-0.283,1.01L19.707,18l10.01-10.01C29.892,8.288,30,8.63,30,9V27z M12,7.5C12,7.224,12.224,7,12.5,7h7  C19.776,7,20,7.224,20,7.5S19.776,8,19.5,8h-7C12.224,8,12,7.776,12,7.5z M12,9.5C12,9.224,12.224,9,12.5,9h7  C19.776,9,20,9.224,20,9.5S19.776,10,19.5,10h-7C12.224,10,12,9.776,12,9.5z M19.5,12h-7c-0.276,0-0.5-0.224-0.5-0.5  s0.224-0.5,0.5-0.5h7c0.276,0,0.5,0.224,0.5,0.5S19.776,12,19.5,12z"
+    />
+  </svg>
+);
+
+const phoneSVG = () => (
+  <svg
+    version="1.1"
+    id="DESIGNS"
+    x="0px"
+    y="0px"
+    width="32px"
+    height="32px"
+    viewBox="0 0 32 32"
+  >
+    <g>
+      <g>
+        <path
+          class="linesandangles_een"
+          d="M4,23l0.01-0.01c0,0-0.001,0-0.001,0C4.003,22.99,4,22.993,4,23z"
+        />
+        <path
+          class="linesandangles_een"
+          d="M27.315,8.315L23,4l-7,7l3,3l-5,5l-3-3l-6.99,6.99c0.19,0.009,2.984,2.909,4.306,4.292    c0.379,0.397,0.899,0.615,1.44,0.615c0.078,0,0.157-0.005,0.236-0.014c9.386-1.104,16.787-8.505,17.891-17.891l0.004-0.03    C27.958,9.355,27.747,8.747,27.315,8.315z M9.762,25.9c-1.252-1.31-2.172-2.267-2.867-2.967L11,18.828l3,3L21.828,14l-3-3    l4.166-4.166l2.902,2.925C24.897,18.26,18.26,24.897,9.762,25.9z"
+        />
+      </g>
+      <g>
+        <path
+          class="linesandangles_een"
+          d="M4,23l0.01-0.01c0,0-0.001,0-0.001,0C4.003,22.99,4,22.993,4,23z"
+        />
+        <path
+          class="linesandangles_een"
+          d="M27.315,8.315L23,4l-7,7l3,3l-5,5l-3-3l-6.99,6.99c0.19,0.009,2.984,2.909,4.306,4.292    c0.379,0.397,0.899,0.615,1.44,0.615c0.078,0,0.157-0.005,0.236-0.014c9.386-1.104,16.787-8.505,17.891-17.891l0.004-0.03    C27.958,9.355,27.747,8.747,27.315,8.315z M9.762,25.9c-1.252-1.31-2.172-2.267-2.867-2.967L11,18.828l3,3L21.828,14l-3-3    l4.166-4.166l2.902,2.925C24.897,18.26,18.26,24.897,9.762,25.9z"
+        />
+      </g>
+    </g>
+  </svg>
+);
 
 const Hero = () => {
-  // const { farm } = useStaticQuery(graphql`
-  //   query {
-  //     farm: file(
-  //       relativePath: { eq: "induba-entrance-argentina-misiones.jpg" }
-  //     ) {
-  //       childImageSharp {
-  //         fluid(maxWidth: 1200) {
-  //           ...GatsbyImageSharpFluid
-  //         }
-  //       }
-  //     }
-  //   }
-  // `);
+  const { infantil } = useStaticQuery(graphql`
+    query {
+      infantil: file(
+        relativePath: { eq: "dentista-posadas-misiones-infantil.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `);
 
-  {
-    /* <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.0.1/dist/alpine.js" defer></script> */
-  }
   return (
-    <div x-data="{ open: false }" class="relative bg-white overflow-hidden">
-      <div class="max-w-screen-xl mx-auto ">
-        <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
-          <div class="pt-6 px-4 sm:px-6 lg:px-8">
-            <nav class="relative flex items-center justify-between sm:h-10 lg:justify-start">
-              <div class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
-                <div class="flex items-center justify-between w-full md:w-auto">
-                  <a href="#">
-                    <img
-                      class="h-8 w-auto sm:h-10"
-                      src="/img/logos/workflow-mark-on-white.svg"
-                      alt=""
-                    />
-                  </a>
-                  <div class="-mr-2 flex items-center md:hidden">
-                    <button
-                      type="button"
-                      class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
-                    >
-                      <svg
-                        class="h-6 w-6"
-                        stroke="currentColor"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M4 6h16M4 12h16M4 18h16"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="hidden md:block md:ml-10 md:pr-4">
-                <a
-                  href="#"
-                  class="font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
-                >
-                  Product
-                </a>
-                <a
-                  href="#"
-                  class="ml-8 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
-                >
-                  Features
-                </a>
-                <a
-                  href="#"
-                  class="ml-8 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
-                >
-                  Marketplace
-                </a>
-                <a
-                  href="#"
-                  class="ml-8 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
-                >
-                  Company
-                </a>
-                <a
-                  href="#"
-                  class="ml-8 font-medium text-indigo-600 hover:text-indigo-900 focus:outline-none focus:text-indigo-700 transition duration-150 ease-in-out"
-                >
-                  Log in
-                </a>
-              </div>
-            </nav>
-          </div>
-
-          <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
-            <div class="rounded-lg shadow-md">
-              <div class="rounded-lg bg-white shadow-xs overflow-hidden">
-                <div class="px-5 pt-4 flex items-center justify-between">
-                  <div>
-                    <img
-                      class="h-8 w-auto"
-                      src="/img/logos/workflow-mark-on-white.svg"
-                      alt=""
-                    />
-                  </div>
-                  <div class="-mr-2">
-                    <button
-                      type="button"
-                      class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
-                    >
-                      <svg
-                        class="h-6 w-6"
-                        stroke="currentColor"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M6 18L18 6M6 6l12 12"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-                <div class="px-2 pt-2 pb-3">
-                  <a
-                    href="#"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
-                  >
-                    Product
-                  </a>
-                  <a
-                    href="#"
-                    class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
-                  >
-                    Features
-                  </a>
-                  <a
-                    href="#"
-                    class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
-                  >
-                    Marketplace
-                  </a>
-                  <a
-                    href="#"
-                    class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
-                  >
-                    Company
-                  </a>
-                </div>
-                <div>
-                  <a
-                    href="#"
-                    class="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100 hover:text-indigo-700 focus:outline-none focus:bg-gray-100 focus:text-indigo-700 transition duration-150 ease-in-out"
-                  >
-                    Log in
-                  </a>
-                </div>
-              </div>
+    <div className="bg-white rounded-lg shadow px-5 py-6 sm:px-6">
+      <div className="rounded-lg h-96">
+        <div className="flex flex-col">
+          <div className="w-full md:w-2/3">
+            <h1 className="text-4xl font-bold text-blue-900">
+              Maria Elena Pinelli
+            </h1>
+            <p className="text-lg text-gray-700 mb-10">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+              venenatis felis a elit volutpat, nec pulvinar ipsum ultricies.
+            </p>
+            <div className="flex mb-4">{officeSVG()} 25 de Mayo 1856</div>
+            <div className="flex mb-4">{phoneSVG()} (378) 420 0079</div>
+            <div className="flex mb-4">
+              {mailSVG()}{' '}
+              <a href="mailto:elepinelli@hotmail.com">elepinelli@hotmail.com</a>
             </div>
           </div>
-
-          <div class="mt-10 mx-auto max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
-            <div class="sm:text-center lg:text-left">
-              <h2 class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
-                Data to enrich your
-                <br class="xl:hidden" />
-                <span class="text-indigo-600">online business</span>
-              </h2>
-              <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-                lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-                fugiat aliqua.
-              </p>
-              <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                <div class="rounded-md shadow">
-                  <a
-                    href="#"
-                    class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
-                  >
-                    Get started
-                  </a>
-                </div>
-                <div class="mt-3 sm:mt-0 sm:ml-3">
-                  <a
-                    href="#"
-                    class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-indigo-700 bg-indigo-100 hover:text-indigo-600 hover:bg-indigo-50 focus:outline-none focus:shadow-outline focus:border-indigo-300 transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
-                  >
-                    Live demo
-                  </a>
-                </div>
-              </div>
-            </div>
+          <div className="w-full md:w-1/3">
+            <Img fluid={infantil.childImageSharp.fluid} />
           </div>
-          <svg
-            class="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2"
-            fill="currentColor"
-            viewBox="0 0 100 100"
-            preserveAspectRatio="none"
-          >
-            <polygon points="50,0 100,0 50,100 0,100" />
-          </svg>
         </div>
-      </div>
-      <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-        <img
-          class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-          src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
-          alt=""
-        />
       </div>
     </div>
   );

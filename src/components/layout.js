@@ -1,6 +1,5 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import Footer from './footer';
 import useSiteMetadata from '../hooks/use-sitemetadata';
 
 const Layout = ({ children }) => {
@@ -13,8 +12,7 @@ const Layout = ({ children }) => {
         <meta name="content" description={description}></meta>
       </Helmet>
 
-      <main>{children}</main>
-      <Footer />
+      <div className="bg-orange-100">{children}</div>
     </>
   );
 };
