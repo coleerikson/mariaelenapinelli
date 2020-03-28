@@ -87,20 +87,20 @@ const Hero = () => {
   `);
 
   return (
-    <div className="bg-white rounded-lg shadow px-5 py-6 sm:px-6">
+    <div className="bg-white rounded-lg shadow px-8 py-8">
       <div className="rounded-lg h-96">
-        <div className="flex flex-col">
+        <div className="flex flex-col md:flex-row lg:flex-row">
           <div className="w-full md:w-2/3">
             <h1 className="text-4xl font-bold text-blue-900">
               Maria Elena Pinelli
             </h1>
-            <p className="text-lg text-gray-700 mb-10">
+            <p className="text-lg text-gray-700 mb-2">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
               venenatis felis a elit volutpat, nec pulvinar ipsum ultricies.
             </p>
-            <div className="flex mb-4">{officeSVG()} 25 de Mayo 1856</div>
-            <div className="flex mb-4">{phoneSVG()} (378) 420 0079</div>
-            <div className="flex mb-4">
+            <div className="flex p-2">{officeSVG()} 25 de Mayo 1856</div>
+            <div className="flex p-2">{phoneSVG()} (378) 420 0079</div>
+            <div className="flex p-2">
               {mailSVG()}{' '}
               <a href="mailto:elepinelli@hotmail.com">elepinelli@hotmail.com</a>
             </div>

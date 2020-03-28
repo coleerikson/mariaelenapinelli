@@ -20,7 +20,7 @@ const tooth = () => (
 const Nav = () => (
   <div className="bg-teal-600 pb-32">
     <nav className="bg-teal-600">
-      <div className="max-w-6xl mx-auto sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto py-2 sm:px-6 lg:px-10">
         <div className="border-b border-teal-600">
           <div className="flex items-center justify-between h-16 px-6 sm:px-0">
             <div className="flex items-center">
@@ -30,7 +30,7 @@ const Nav = () => (
                 </h3>
               </div>
             </div>
-            <div className="md:block">
+            <div className="hidden sm:hidden md:block lg:block xl:block">
               <div className="ml-4 flex items-center md:ml-6">
                 <div className="ml-3 relative">
                   <h3 className="text-teal-900 flex">
