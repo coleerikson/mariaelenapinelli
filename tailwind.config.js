@@ -1,6 +1,10 @@
 module.exports = {
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'dentist-teal': '#15c2d5',
+      },
+    },
     fontFamily: {
       sans: ['Open Sans', 'sans serif'],
       serif: ['Gelasio', 'serif'],
