@@ -6,8 +6,8 @@ const phoneSVG = () => (
     className="icons"
     x="0px"
     y="0px"
-    width="32px"
-    height="32px"
+    width="24px"
+    height="24px"
     viewBox="0 0 32 32"
   >
     <g>
@@ -73,44 +73,44 @@ const Nav = () => (
   <div className="bg-dentist-teal pb-32">
     <nav className="bg-dentist-teal">
       <div className="max-w-6xl mx-auto py-0 sm:py-2 px-2 sm:px-8">
-        <div className="border-b border-dentist-teal">
-          <div className="flex items-center justify-between h-16 px-6 sm:px-0">
-            <div className="flex items-center">
-              <div className="flex-shrink-0">
-                <h3 className="text-teal-900 font-bold">
-                  Dra. Maria Elena Pinelli
+        <div className="flex items-center justify-between h-16 px-6 sm:px-0">
+          <div className="flex items-center">
+            <div className="flex-shrink-0">
+              <h3 className="text-teal-900 font-bold">
+                Dra. Maria Elena Pinelli
+              </h3>
+            </div>
+          </div>
+          <div className="hidden md:block">
+            <div className="ml-4 flex items-center md:ml-6">
+              <div className="">
+                <h3 className="text-teal-900 text-sm flex items-center">
+                  {phoneSVG()}
+                  <a href="tel:3764200079" className="underline">
+                    3764200079
+                  </a>
                 </h3>
               </div>
-            </div>
-            <div className="hidden md:block">
-              <div className="ml-4 flex items-center md:ml-6">
-                <div className="">
-                  <h3 className="text-teal-900 flex items-center">
-                    {phoneSVG()}
-                    <a href="tel:3764200079" className="underline">
-                      3764200079
-                    </a>
-                  </h3>
-                </div>
-                <div className="ml-8">
-                  <h3 className="text-teal-900 flex items-center">
-                    {officeSVG()}
-                    <a href="tel:3764200079" className="underline">
-                      25 de Mayo 1856
-                    </a>
-                  </h3>
-                </div>
-                <div className="ml-8">
-                  <h3 className="text-teal-900 flex items-center">
-                    {mailSVG()}
-                    <a
-                      href="mailto:elepinelli@hotmail.com"
-                      className="underline"
-                    >
-                      elepinelli@hotmail.com
-                    </a>
-                  </h3>
-                </div>
+              <div className="ml-8">
+                <h3 className="text-teal-900 text-sm flex items-center">
+                  {officeSVG()}
+                  <a
+                    href="https://goo.gl/maps/DcvqmbadCgei6SYx6"
+                    className="underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    25 de Mayo 1856
+                  </a>
+                </h3>
+              </div>
+              <div className="ml-8">
+                <h3 className="text-teal-900 text-sm flex items-center">
+                  {mailSVG()}
+                  <a href="mailto:elepinelli@hotmail.com" className="underline">
+                    elepinelli@hotmail.com
+                  </a>
+                </h3>
               </div>
             </div>
           </div>
