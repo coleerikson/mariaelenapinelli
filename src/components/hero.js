@@ -25,11 +25,10 @@ const Hero = () => {
             Dra. Maria Elena Pinelli
           </h1>
           <p className="text-xl text-gray-800 mb-8">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-            venenatis felis a elit volutpat, nec pulvinar ipsum ultricies.
+            Ortodoncista basado en Posadas, Misiones.
           </p>
 
-          <p className="text-xl text-gray-800 mb-5">
+          {/* <p className="text-xl text-gray-800 mb-5">
             <em>
               "Con mis 17 años de experienca, puedo confirmar que Cole es el
               mejor primo que tengo. Mucho mejor que Chelo, Gaby, o Caro.
@@ -39,11 +38,11 @@ const Hero = () => {
 
           <p className="text-gray-600 mb-8">
             - Dra. Maria Elena Pinelli, Odontóloga
-          </p>
+          </p> */}
 
           <a
             href="tel:3764200079"
-            className="inline-block bg-blue-900 hover:bg-dentist-teal text-white px-8 py-4 rounded-lg text-lg"
+            className="inline-block bg-blue-900 hover:bg-dentist-teal text-white px-8 py-4 rounded-lg text-lg font-bold"
           >
             RESERVA UNA CITA
           </a>

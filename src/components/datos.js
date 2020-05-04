@@ -3,11 +3,11 @@ import React from 'react';
 const officeSVG = () => (
   <svg
     version="1.1"
-    className="icons"
+    className="mr-3"
     x="0px"
     y="0px"
-    width="56px"
-    height="56px"
+    width="40px"
+    height="40px"
     viewBox="0 0 32 32"
   >
     <path
@@ -20,11 +20,11 @@ const officeSVG = () => (
 const mailSVG = () => (
   <svg
     version="1.1"
-    className="icons"
+    className="mr-3"
     x="0px"
     y="0px"
-    width="56px"
-    height="56px"
+    width="40px"
+    height="40px"
     viewBox="0 0 32 32"
   >
     <path
@@ -37,11 +37,11 @@ const mailSVG = () => (
 const phoneSVG = () => (
   <svg
     version="1.1"
-    className="icons"
+    className="mr-3"
     x="0px"
     y="0px"
-    width="56px"
-    height="56px"
+    width="40px"
+    height="40px"
     viewBox="0 0 32 32"
   >
     <g>
@@ -72,11 +72,11 @@ const phoneSVG = () => (
 const clockSVG = () => (
   <svg
     version="1.1"
-    className="icons"
+    className="mr-3"
     x="0px"
     y="0px"
-    width="56px"
-    height="56px"
+    width="40px"
+    height="40px"
     viewBox="0 0 32 32"
   >
     <path
@@ -87,24 +87,50 @@ const clockSVG = () => (
 );
 
 const Datos = () => (
-  <div className="flex flex-col justify-between px-6 py-5 my-16 border-t border-b items-center lg:flex-row">
-    <div className="flex items-center py-4 lg:py-0 text-center flex-col">
+  <div className="flex flex-col justify-between px-2 py-5 my-4 md:my-16 border-t border-b items-center lg:flex-row">
+    <div className="flex items-center py-4 lg:py-0">
       {officeSVG()}
-      25 de Mayo 1856
+      <div>
+        <h5 className="text-gray-600 text-base leading-tight uppercase text-xs">
+          Ubicacion
+        </h5>
+        <h4 className="text-gray-800">25 de Mayo 1856</h4>
+      </div>
     </div>
-    <div className="flex items-center py-4 lg:py-0 text-center flex-col">
+    <div className="flex items-center py-4 lg:py-0">
       {phoneSVG()}
-      3764 200079
+      <div>
+        <h5 className="text-gray-600 text-base leading-tight uppercase text-xs">
+          Telefono
+        </h5>
+        <a href="tel:3764 200079" className="text-gray-800 underline">
+          3764 200079
+        </a>
+      </div>
     </div>
-    <div className="flex items-center py-4 lg:py-0 text-center flex-col">
+    <div className="flex items-center py-4 lg:py-0">
       {mailSVG()}
-      <a href="mailto:elepinelli@hotmail.com">elepinelli@hotmail.com</a>
+      <div>
+        <h5 className="text-gray-600 text-base leading-tight uppercase text-xs">
+          Email
+        </h5>
+        <a href="mailto:elepinelli@hotmail.com" className="underline">
+          elepinelli@hotmail.com
+        </a>
+      </div>
     </div>
-    <div className="flex items-center py-4 lg:py-0 text-center flex-col">
+    <div className="flex items-center py-4 lg:py-0">
       {clockSVG()}
-      Horarios de atencion: martes y jueves de 8:30 a 11
-      <br />
-      todas las tardes (de lunes a viernes) de 16:00 - 20:00
+      <div>
+        <h5 className="text-gray-600 text-base leading-tight uppercase text-xs">
+          Horarios de atencion
+        </h5>
+        <h4 className="text-gray-800">
+          Manañas: Martes y Jueves de 8:30 - 11:00
+          <br />
+          Tardes: Lunes a Viernes de 16:00 - 20:00
+        </h4>
+      </div>
     </div>
   </div>
 );

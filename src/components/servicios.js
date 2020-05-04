@@ -19,7 +19,7 @@ const Servicios = () => {
     }
   `);
   return (
-    <div className="px-5 py-6 sm:px-0">
+    <div className="px-5 py-3 sm:px-0 sm:py-3">
       <div className="flex flex-col sm:flex-col md:flex-row">
         <div className="mt-4 md:mt-0 md:pl-10 w-full md:w-1/2">
           <Img
