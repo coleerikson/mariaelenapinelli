@@ -21,7 +21,10 @@ const Hero = () => {
     <div className=" border-b px-4 pb-4 sm:pb-12">
       <div className="flex flex-col md:flex-row lg:flex-row items-center">
         <div className="w-full md:w-2/3 pb-6">
-          <h1 className="text-4xl font-bold text-blue-900 mb-3" itemProp="name">
+          <h1
+            className="text-2xl sm:text-4xl font-bold text-blue-900 mb-3"
+            itemProp="name"
+          >
             Dra. Maria Elena Pinelli
           </h1>
           <p className="text-xl text-gray-800 mb-8" itemProp="description">
@@ -51,6 +54,7 @@ const Hero = () => {
           <Img
             className="rounded-lg overflow-auto"
             fluid={mariaElena.childImageSharp.fluid}
+            itemProp="image"
           />
         </div>
       </div>

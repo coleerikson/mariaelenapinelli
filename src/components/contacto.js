@@ -101,10 +101,13 @@ const Contacto = () => {
     <div className="px-4 pt-8 pb-10 sm:pt-8 md:pb-8 border-b">
       <div className="flex flex-col md:flex-row">
         <div className="flex flex-col justify-center py-0 sm:py-4 w-full md:w-1/2">
-          <h3 className="text-3xl font-bold text-blue-900" name="contacto">
-            Contacto y Ubicacion
+          <h3
+            className="text-2xl sm:text-3xl font-bold text-blue-900"
+            name="contacto"
+          >
+            Contacto y Ubicación
           </h3>
-          <div className="flex py-5">
+          <div className="flex py-5 pl-4">
             {officeSVG()}
             <div
               itemProp="address"
@@ -112,7 +115,7 @@ const Contacto = () => {
               itemType="http://schema.org/PostalAddress"
             >
               <h5 className="text-lg font-bold text-blue-900 sans-serif">
-                Ubicacion
+                Ubicación
               </h5>
               <a
                 href="https://goo.gl/maps/DcvqmbadCgei6SYx6"
@@ -133,11 +136,11 @@ const Contacto = () => {
               </span>
             </div>
           </div>
-          <div className="flex py-5">
+          <div className="flex py-5 pl-4">
             {phoneSVG()}
             <div>
               <h5 className="text-lg font-bold text-blue-900 sans-serif">
-                Telefono
+                Teléfono
               </h5>
               <a
                 href="tel:3764 200079"
@@ -148,7 +151,7 @@ const Contacto = () => {
               </a>
             </div>
           </div>
-          <div className="flex py-5">
+          <div className="flex py-5 pl-4">
             {mailSVG()}
             <div>
               <h5 className="text-lg font-bold text-blue-900">Email</h5>
@@ -160,7 +163,7 @@ const Contacto = () => {
               </a>
             </div>
           </div>
-          <div className="flex py-5">
+          <div className="flex py-5 pl-4">
             {clockSVG()}
             <div>
               <h5 className="text-lg font-bold text-blue-900 sans-serif">
@@ -175,7 +178,7 @@ const Contacto = () => {
           </div>
         </div>
 
-        <div className="flex flex-col justify-center pl-4 md:pl-8 pr-0 w-full md:w-1/2">
+        <div className="flex flex-col justify-center pl-0 md:pl-4 md:pl-8 pr-0 w-full md:w-1/2">
           <a
             href="https://goo.gl/maps/DcvqmbadCgei6SYx6"
             className="underline"
