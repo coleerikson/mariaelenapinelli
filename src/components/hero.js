@@ -6,11 +6,11 @@ const Hero = () => {
   const { mariaElena } = useStaticQuery(graphql`
     query {
       mariaElena: file(
-        relativePath: { eq: "otrodonia-posadas-maria-elena-pinelli.jpeg" }
+        relativePath: { eq: "odontologo-posadas-maria-elena-pinelli.jpeg" }
       ) {
         childImageSharp {
           fluid(maxWidth: 600) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
@@ -18,13 +18,13 @@ const Hero = () => {
   `);
 
   return (
-    <div className="rounded-lg h-96">
+    <div className=" border-b px-4 pb-4 sm:pb-12">
       <div className="flex flex-col md:flex-row lg:flex-row items-center">
         <div className="w-full md:w-2/3 pb-6">
-          <h1 className="text-4xl font-bold text-blue-900 mb-3">
+          <h1 className="text-4xl font-bold text-blue-900 mb-3" itemProp="name">
             Dra. Maria Elena Pinelli
           </h1>
-          <p className="text-xl text-gray-800 mb-8">
+          <p className="text-xl text-gray-800 mb-8" itemProp="description">
             Ortodoncista basado en Posadas, Misiones.
           </p>
 

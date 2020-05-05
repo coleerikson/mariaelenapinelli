@@ -7,21 +7,21 @@ const Servicios = () => {
     query {
       mariaElenaOficina: file(
         relativePath: {
-          eq: "otrodonia-posadas-maria-elena-pinelli-oficina.jpeg"
+          eq: "odontologo-posadas-maria-elena-pinelli-oficina.jpeg"
         }
       ) {
         childImageSharp {
           fluid(maxWidth: 600) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
     }
   `);
   return (
-    <div className="px-5 py-3 sm:px-0 sm:py-3">
-      <div className="flex flex-col sm:flex-col md:flex-row">
-        <div className="mt-4 md:mt-0 md:pl-10 w-full md:w-1/2">
+    <div className="px-4 py-8 md:py-12 border-b">
+      <div className="flex flex-col flex-col-reverse md:flex-row ">
+        <div className="mt-4 md:mt-0 w-full md:w-1/2">
           <Img
             className="rounded-lg overflow-auto"
             fluid={mariaElenaOficina.childImageSharp.fluid}

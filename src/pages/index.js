@@ -1,8 +1,8 @@
 import React from 'react';
 import Layout from '../components/layout';
 import Hero from '../components/hero';
-import Datos from '../components/datos';
-// import Servicios from '../components/servicios';
+import Servicios from '../components/servicios';
+import Contacto from '../components/contacto';
 import Footer from '../components/footer';
 
 import Nav from '../components/nav';
@@ -10,11 +10,15 @@ import Nav from '../components/nav';
 export default () => (
   <Layout>
     <Nav />
-    <main className="-mt-32 px-4 sm:px-6 lg:px-8">
-      <div className="bg-white rounded-lg shadow-2xl p-10 max-w-6xl mx-auto pb-12 px-4 sm:px-6 lg:px-8">
+    <main
+      className="-mt-32 px-4 sm:px-6 lg:px-8"
+      itemScope
+      itemType="http://schema.org/LocalBusiness"
+    >
+      <div className="bg-white px-4 py-8 rounded-lg shadow-2xl max-w-6xl mx-auto">
         <Hero />
-        <Datos />
-        {/* <Servicios /> */}
+        <Servicios />
+        <Contacto />
         <section className="px-6 pt-8 mt-2">
           <h4 className="text-lg font-bold text-blue-900">Ortodoncia</h4>
           <p className="text-gray-700 mb-8 text-lg">
