@@ -18,7 +18,7 @@ const Hero = () => {
   `);
 
   return (
-    <div className=" border-b px-4 pb-4 sm:pb-12">
+    <div className="px-2 pb-4 sm:pb-12 border-b">
       <div className="flex flex-col md:flex-row lg:flex-row items-center">
         <div className="w-full md:w-2/3 pb-6">
           <h1
@@ -28,7 +28,7 @@ const Hero = () => {
             Dra. Maria Elena Pinelli
           </h1>
           <p className="text-xl text-gray-800 mb-8" itemProp="description">
-            Ortodoncista basado en Posadas, Misiones.
+            Odontóloga basado en Posadas, Misiones.
           </p>
 
           {/* <p className="text-xl text-gray-800 mb-5">

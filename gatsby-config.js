@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'Maria Elena Pinelli - Odontologa en Posadas, Misiones.',
-    description: 'Pagina web de Odontologa Maria Elena Pinelli.',
+    title: 'Maria Elena Pinelli - Odontóloga en Posadas, Misiones.',
+    description: 'Pagina web de Odontóloga Maria Elena Pinelli.',
   },
   plugins: [
     'gatsby-plugin-postcss',

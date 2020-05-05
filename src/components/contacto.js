@@ -98,7 +98,7 @@ const Contacto = () => {
     }
   `);
   return (
-    <div className="px-4 pt-8 pb-10 sm:pt-8 md:pb-8 border-b">
+    <div className="px-2 pt-8 pb-10 sm:pt-8 md:pb-8 border-b">
       <div className="flex flex-col md:flex-row">
         <div className="flex flex-col justify-center py-0 sm:py-4 w-full md:w-1/2">
           <h3
