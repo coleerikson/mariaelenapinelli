@@ -22,33 +22,33 @@ const Hero = () => {
       <div className="flex flex-col md:flex-row lg:flex-row items-center">
         <div className="w-full md:w-2/3 pb-6">
           <h1
-            className="text-2xl sm:text-4xl font-bold text-blue-900 mb-3"
+            className="text-center sm:text-left text-2xl sm:text-4xl font-bold text-blue-900 mb-3"
             itemProp="name"
           >
             Dra. Maria Elena Pinelli
           </h1>
-          <p className="text-xl text-gray-800 mb-8" itemProp="description">
-            Odontóloga basado en Posadas, Misiones.
-          </p>
-
-          {/* <p className="text-xl text-gray-800 mb-5">
-            <em>
-              "Con mis 17 años de experienca, puedo confirmar que Cole es el
-              mejor primo que tengo. Mucho mejor que Chelo, Gaby, o Caro.
-              Especialmente Lula."
-            </em>
-          </p>
-
-          <p className="text-gray-600 mb-8">
-            - Dra. Maria Elena Pinelli, Odontóloga
-          </p> */}
-
-          <a
-            href="tel:3764200079"
-            className="inline-block bg-blue-900 hover:bg-dentist-teal text-white px-8 py-4 rounded-lg text-lg font-bold"
+          <p
+            className="text-xl text-gray-800 mb-5 text-center sm:text-left "
+            itemProp="description"
           >
-            RESERVA UNA CITA
-          </a>
+            Soy Maria Elena Pinelli Benitez, Odontologa especialista en
+            Ortodoncia y Ortopedia de los Maxilares.
+          </p>
+          <div class="flex items-center">
+            <a
+              href="#servicios"
+              className="block underline text-xl text-gray-600"
+            >
+              De que se trata esto?{' '}
+            </a>
+
+            <a
+              href="tel:3764200079"
+              className="ml-4 inline-block bg-blue-900 hover:bg-dentist-teal text-white px-6 py-3 rounded-lg text-lg font-light"
+            >
+              RESERVA UNA CITA
+            </a>
+          </div>
         </div>
         <div className="w-full mt-4 md:mt-0 md:w-1/2 md:pl-10">
           <Img
