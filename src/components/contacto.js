@@ -130,7 +130,7 @@ const Contacto = () => {
                 Teléfono
               </h5>
               <a
-                href="tel:376 4200079"
+                href="https://wa.me/5493764200079"
                 className="text-gray-800 underline sans-serif"
               >
                 376 4200079

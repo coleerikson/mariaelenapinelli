@@ -40,7 +40,7 @@ const Hero = () => {
             </a>
 
             <a
-              href="tel:3764200079"
+              href="https://wa.me/5493764200079"
               className="sm:ml-4 shadow-md inline-block bg-teal-500 hover:bg-teal-600 text-white px-4 py-3 rounded-lg text-lg lg:text-xl"
             >
               RESERVA UNA CITA
