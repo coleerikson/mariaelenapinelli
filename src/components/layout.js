@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
         <meta name="content" description={description}></meta>
 
         <script type="application/ld+json">
-          {{
+          {JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'LocalBusiness',
             image: [
@@ -49,7 +49,7 @@ const Layout = ({ children }) => {
                 closes: '20:00',
               },
             ],
-          }}
+          })}
         </script>
       </Helmet>
 
