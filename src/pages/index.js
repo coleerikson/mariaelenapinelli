@@ -10,11 +10,7 @@ import Nav from '../components/nav';
 export default () => (
   <Layout>
     <Nav />
-    <main
-      className="px-2 md:px-4"
-      itemScope
-      itemType="http://schema.org/LocalBusiness"
-    >
+    <main className="px-2 md:px-4">
       <div className="bg-white px-2 sm:px-5 py-8 rounded-lg shadow-2xl max-w-6xl mx-auto">
         <Hero />
         <Servicios />

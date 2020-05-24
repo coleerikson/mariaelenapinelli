@@ -21,16 +21,10 @@ const Hero = () => {
     <div className="px-2 pb-4 sm:pb-12 border-b">
       <div className="flex flex-col md:flex-row lg:flex-row items-center">
         <div className="w-full md:w-2/3 pb-6">
-          <h1
-            className="text-center sm:text-left text-3xl sm:text-4xl text-blue-900 mb-3"
-            itemProp="name"
-          >
+          <h1 className="text-center sm:text-left text-3xl sm:text-4xl text-blue-900 mb-3">
             Dra. Maria Elena Pinelli
           </h1>
-          <p
-            className="text-xl text-gray-800 mb-6 text-center sm:text-left"
-            itemProp="description"
-          >
+          <p className="text-xl text-gray-800 mb-6 text-center sm:text-left">
             Soy Maria Elena Pinelli Benitez, Odontologa especialista en
             Ortodoncia y Ortopedia de los Maxilares.
           </p>
@@ -54,7 +48,6 @@ const Hero = () => {
           <Img
             className="rounded-lg overflow-auto"
             fluid={mariaElena.childImageSharp.fluid}
-            itemProp="image"
           />
         </div>
       </div>

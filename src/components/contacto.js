@@ -106,11 +106,7 @@ const Contacto = () => {
           </h3>
           <div className="flex py-5 pl-4">
             {officeSVG()}
-            <div
-              itemProp="address"
-              itemScope
-              itemType="http://schema.org/PostalAddress"
-            >
+            <div>
               <h5 className="text-lg font-bold text-teal-500 sans-serif">
                 Ubicación
               </h5>
@@ -119,18 +115,12 @@ const Contacto = () => {
                 className="text-gray-800 sans-serif underline"
                 target="_blank"
                 rel="noopener noreferrer"
-                itemProp="streetAddress"
               >
                 25 de Mayo 1856
               </a>
               <br />
-              <span className="text-gray-800" itemProp="addressLocality">
-                Posadas
-              </span>
-              ,{' '}
-              <span className="text-gray-800" itemProp="addressRegion">
-                Misiones
-              </span>
+              <span className="text-gray-800">Posadas</span>,{' '}
+              <span className="text-gray-800">Misiones</span>
             </div>
           </div>
           <div className="flex py-5 pl-4">
@@ -140,11 +130,10 @@ const Contacto = () => {
                 Teléfono
               </h5>
               <a
-                href="tel:3764 200079"
+                href="tel:376 4200079"
                 className="text-gray-800 underline sans-serif"
-                itemProp="telephone"
               >
-                3764 200079
+                376 4200079
               </a>
             </div>
           </div>
