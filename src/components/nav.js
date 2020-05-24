@@ -6,7 +6,7 @@ const Nav = () => (
       <div className="flex items-center justify-between h-16">
         <div className="flex items-center">
           <div className="flex-shrink-0">
-            <h3 className="text-teal-800 font-bold">
+            <h3 className="text-teal-500 font-bold">
               Dra. Maria Elena Pinelli
             </h3>
           </div>

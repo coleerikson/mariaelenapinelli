@@ -21,17 +21,20 @@ const Hero = () => {
     <div className="px-2 pb-4 sm:pb-12 border-b">
       <div className="flex flex-col md:flex-row lg:flex-row items-center">
         <div className="w-full md:w-2/3 pb-6">
-          <h1 className="text-center sm:text-left text-3xl sm:text-4xl text-blue-900 mb-3">
-            Dra. Maria Elena Pinelli
+          <h1 className="text-center sm:text-left text-base text-gray-500 mb-2">
+            Odontologa en Posadas, Misiones
           </h1>
-          <p className="text-xl text-gray-800 mb-6 text-center sm:text-left">
+          <h2 className="text-center sm:text-left text-3xl sm:text-4xl text-blue-900 mb-3 leading-tight">
+            Dra. Maria Elena Pinelli
+          </h2>
+          <p className="text-lg md:text-xl text-gray-800 mb-6 text-center sm:text-left">
             Soy Maria Elena Pinelli Benitez, Odontologa especialista en
             Ortodoncia y Ortopedia de los Maxilares.
           </p>
           <div className="flex items-center flex-col flex-col-reverse justify-center sm:flex-row sm:justify-start">
             <a
               href="#servicios"
-              className="block underline text-lg lg:text-xl text-teal-500 mt-4 sm:mt-0"
+              className="block underline text-lg lg:text-xl text-blue-800 mt-4 sm:mt-0"
             >
               De que se trata esto?{' '}
             </a>
