@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
         <meta name="content" description={description}></meta>
       </Helmet>
 
-      <div className="bg-dentist-teal">{children}</div>
+      <div className="bg-mint">{children}</div>
     </>
   );
 };

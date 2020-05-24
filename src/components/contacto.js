@@ -101,10 +101,7 @@ const Contacto = () => {
     <div className="px-2 pt-8 pb-10 sm:pt-8 md:pb-8 border-b">
       <div className="flex flex-col md:flex-row">
         <div className="flex flex-col justify-center py-0 sm:py-4 w-full md:w-1/2">
-          <h3
-            className="text-2xl sm:text-3xl font-bold text-blue-900"
-            name="contacto"
-          >
+          <h3 className="text-3xl font-bold text-blue-900 mb-4" name="contacto">
             Contacto y Ubicación
           </h3>
           <div className="flex py-5 pl-4">
@@ -114,7 +111,7 @@ const Contacto = () => {
               itemScope
               itemType="http://schema.org/PostalAddress"
             >
-              <h5 className="text-lg font-bold text-blue-900 sans-serif">
+              <h5 className="text-lg font-bold text-teal-500 sans-serif">
                 Ubicación
               </h5>
               <a
@@ -139,7 +136,7 @@ const Contacto = () => {
           <div className="flex py-5 pl-4">
             {phoneSVG()}
             <div>
-              <h5 className="text-lg font-bold text-blue-900 sans-serif">
+              <h5 className="text-lg font-bold text-teal-500 sans-serif">
                 Teléfono
               </h5>
               <a
@@ -154,7 +151,7 @@ const Contacto = () => {
           <div className="flex py-5 pl-4">
             {mailSVG()}
             <div>
-              <h5 className="text-lg font-bold text-blue-900">Email</h5>
+              <h5 className="text-lg font-bold text-teal-500">Email</h5>
               <a
                 href="mailto:elepinelli@hotmail.com"
                 className="underline sans-serif text-gray-800"
@@ -166,7 +163,7 @@ const Contacto = () => {
           <div className="flex py-5 pl-4">
             {clockSVG()}
             <div>
-              <h5 className="text-lg font-bold text-blue-900 sans-serif">
+              <h5 className="text-lg font-bold text-teal-500 sans-serif">
                 Horarios de atención
               </h5>
               <h4 className="text-gray-800 sans-serif">

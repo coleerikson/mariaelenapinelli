@@ -2,7 +2,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'dentist-teal': '#15c2d5',
+        mint: '#EDF6F5',
       },
     },
     fontFamily: {

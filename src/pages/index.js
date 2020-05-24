@@ -15,7 +15,7 @@ export default () => (
       itemScope
       itemType="http://schema.org/LocalBusiness"
     >
-      <div className="bg-white px-2 sm:px-6 py-8 rounded-lg shadow-2xl max-w-6xl mx-auto">
+      <div className="bg-white px-2 sm:px-5 py-8 rounded-lg shadow-2xl max-w-6xl mx-auto">
         <Hero />
         <Servicios />
         <Contacto />
