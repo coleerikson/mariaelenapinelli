@@ -22,7 +22,7 @@ const Hero = () => {
       <div className="flex flex-col md:flex-row lg:flex-row items-center">
         <div className="w-full md:w-2/3 pb-6">
           <h1
-            className="text-center sm:text-left text-2xl sm:text-4xl text-blue-900 mb-3"
+            className="text-center sm:text-left text-3xl sm:text-4xl text-blue-900 mb-3"
             itemProp="name"
           >
             Dra. Maria Elena Pinelli
@@ -34,17 +34,17 @@ const Hero = () => {
             Soy Maria Elena Pinelli Benitez, Odontologa especialista en
             Ortodoncia y Ortopedia de los Maxilares.
           </p>
-          <div className="flex items-center justify-center sm:justify-start">
+          <div className="flex items-center flex-col flex-col-reverse justify-center sm:flex-row sm:justify-start">
             <a
               href="#servicios"
-              className="block underline text-lg lg:text-xl text-teal-500"
+              className="block underline text-lg lg:text-xl text-teal-500 mt-4 sm:mt-0"
             >
               De que se trata esto?{' '}
             </a>
 
             <a
               href="tel:3764200079"
-              className="ml-6 md:ml-4 shadow-md inline-block bg-teal-500 hover:bg-teal-600 text-white px-4 py-3 rounded-lg text-lg lg:text-xl"
+              className="sm:ml-4 shadow-md inline-block bg-teal-500 hover:bg-teal-600 text-white px-4 py-3 rounded-lg text-lg lg:text-xl"
             >
               RESERVA UNA CITA
             </a>
